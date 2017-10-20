@@ -15,7 +15,17 @@ public class Kata3 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        HistogramDisplay histo=new HistogramDisplay();
-        histo.execute();
+       Histogram<String> histogram=new Histogram();
+        histogram.increment("google.com");
+        histogram.increment("google.com");
+        histogram.increment("prueba.es");
+        histogram.increment("anime.com");
+        histogram.increment("anime.com");
+        histogram.increment("queascodevida.com");
+        histogram.increment("queascodevida.com");
+        histogram.increment("queascodevida.com");
+        histogram.increment("anime.com");
+        histogram.increment("anime.com");
+        new HistogramDisplay(histogram).execute();
     }
 }
